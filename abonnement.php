@@ -1,9 +1,4 @@
 <?php
-// Configuration des paramètres de la base de données
-$servername = "localhost";
-$username = "pdy10996_admin";
-$password = "Eeemixam123%";
-$dbname = "pdy10996_abonnements";
 
 // Connexion à la base de données
 $conn = new mysqli($servername, $username, $password, $dbname);
