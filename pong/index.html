@@ -16,8 +16,17 @@
             <canvas id="canvas"></canvas>
         </section>
         <footer>
-            <p id="contact">contact: <a href="mailto:admin@currently-offline.game">Me contacter</a></p>
+            <p id="contact">contact: <a href="mailto:beric3069@gmail.com">Me contacter</a></p>
         </footer>
+        <script>
+            // Scroll automatique vers le bas
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+
+            // Après 2 secondes (le temps du scroll), on fige tout
+            setTimeout(() => {
+            document.body.style.overflow = "hidden";
+            });
+        </script>
         <script src="script.js"></script>
     </body>
 </htmml>

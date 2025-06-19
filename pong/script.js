@@ -2,8 +2,6 @@
 //canvas.Scene.new({})
 window.onload = function ()
 {
-    
-
     var delay = 50;
 
     var ball_axe_x = 500;
@@ -11,9 +9,10 @@ window.onload = function ()
     
     var raquette1_axe_x = 40;
     var raquette1_axe_y = 200;
-
-    var randNumMin = 14;
+    
     var randNumMax = 20;
+    var randNumMin = 14;
+    
     var rand_int = (Math.floor(Math.random() * (randNumMax - randNumMin + 1)) + randNumMin);
     var rand_int_2 = (Math.floor(Math.random() * (randNumMax - randNumMin + 1)) + randNumMin);
     var vitesse_ball = [rand_int, rand_int_2];
@@ -51,18 +50,6 @@ window.onload = function ()
         setTimeout(refreshCanvas, delay);
         
     }
-    /*function sleep(milliseconds) {
-        const date = Date.now();
-        let currentDate = null;
-        do { 
-            currentDate = Date.now();
-        } while (currentDate - date < milliseconds);
-    }
-    function accelere_ball(){ 
-        sleep(25);
-        vitesse_ball[0] = vitesse_ball[0] + 0.5;
-        vitesse_ball[1] = vitesse_ball[1] + 0.5;
-    }*/
     
     function Racket(x, y)
     {
@@ -123,6 +110,7 @@ window.onload = function ()
             else if(ball_axe_x < -30)
             {   
                 if(essaie >=5){
+                    document.body.style.overflow = "";
                     die();
                 }
                 essaie += 1;
